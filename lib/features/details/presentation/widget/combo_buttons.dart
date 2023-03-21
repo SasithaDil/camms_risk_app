@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:risk_sample/core/theme.dart';
 import 'package:risk_sample/utils/constants.dart';
 
-
 class ComboButtons extends StatelessWidget {
   const ComboButtons({
     super.key,
@@ -17,7 +16,7 @@ class ComboButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onPressed,
       child: Container(
         height: UI.padding4x * 1.5,
@@ -36,9 +35,11 @@ class ComboButtons extends StatelessWidget {
             const SizedBox(
               width: UI.padding,
             ),
-            Text(
-              buttonText,
+            DefaultTextStyle(
               style: const TextStyle(color: white, fontSize: 18.0),
+              child: Text(
+                buttonText,
+              ),
             ),
           ],
         ),

@@ -21,3 +21,4 @@ const mainBlue = Color(0xff004DA3);
 const buttonColor = Color(0xff0050A0);
 const white = Colors.white;
 const grey = Colors.grey;
+const lightGrey = Color(0xffF7F7F7);
