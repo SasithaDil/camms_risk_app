@@ -363,6 +363,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       children: [
                         ComboButtons(
                           onPressed: () {
+                            
                             // try {
                             //   _imageFile = await _picker.pickImage(
                             //       source: ImageSource.camera);
