@@ -19,4 +19,6 @@ class TextStyles {
   static const boldText = TextStyle(fontWeight: FontWeight.bold);
   static const titleText =
       TextStyle(fontSize: 23.0, color: mainBlue, fontWeight: FontWeight.w500);
+  static const boldTextStyle = TextStyle(
+      color: Colors.black, fontSize: 15.0, fontWeight: FontWeight.bold);
 }

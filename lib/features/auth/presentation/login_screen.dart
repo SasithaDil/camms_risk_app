@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               InkWell(
                                 //TODO: change navigation when done
                                 onTap: () => Navigator.pushNamed(
-                                    context, ScreenRoutes.toInsidentdetailScreen),
+                                    context, ScreenRoutes.toDetailsScreen),
                                 child: Container(
                                   height: UI.padding4x * 1.5,
                                   width: UI.padding8x * 1.8,
