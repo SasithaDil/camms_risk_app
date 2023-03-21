@@ -1,0 +1,64 @@
+{
+   "FormControls": [
+      {
+         "ObjectDefinitionId": 1,
+         "Name": "IncidentNotificationForm",
+         "textValue": "",
+         "DisplayName": "",
+         "TemplateType": 16,
+         "TemplateTypeString": "GroupHeader",
+         "IsEnable": false,
+         "ModifiedDate": ""
+      },
+      {
+         "ObjectDefinitionId": 2,
+         "Name": "IncidentTypeName",
+         "textValue": "",
+         "DisplayName": "Notification Type",
+         "TemplateType": 7,
+         "TemplateTypeString": "TextBoxString",
+         "IsEnable": true,
+         "ModifiedDate": ""
+      },
+      {
+         "ObjectDefinitionId": 3,
+         "Name": "IncidentTypeName",
+         "textValue": "",
+         "DisplayName": "Modified Date",
+         "TemplateType": 7,
+         "TemplateTypeString": "TextBoxString",
+         "IsEnable": true,
+         "ModifiedDate": ""
+      },
+      {
+         "ObjectDefinitionId": 4,
+         "Name": "IncidentTypeName",
+         "textValue": "",
+         "DisplayName": "Notification Type",
+         "TemplateType": 7,
+         "TemplateTypeString": "DateTime",
+         "IsEnable": false,
+         "ModifiedDate": "2023-03-03 09:54:00.000"
+      },
+      {
+         "ObjectDefinitionId": 5,
+         "Name": "IncidentTypeName",
+         "textValue": "",
+         "DisplayName": "Modified Date",
+         "TemplateType": 7,
+         "TemplateTypeString": "DateTime",
+         "IsEnable": false,
+         "ModifiedDate": "2023-03-03 09:54:00.000"
+      },
+      {
+         "Name": "",
+         "textValue": "",
+         "DisplayName": "",
+         "TemplateType": 7,
+         "TemplateTypeString": "ComboButtons",
+         "IsEnable": false,
+         "ModifiedDate": ""
+      }
+      
+   ]
+}
