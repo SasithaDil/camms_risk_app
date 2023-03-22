@@ -98,7 +98,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               InkWell(
                                 //TODO: change navigation when done
-                                onTap: () => context.toNamed(ScreenRoutes.toDetailsScreen),
+                                onTap: () => context
+                                    .toNamed(ScreenRoutes.toDetailsScreen),
                                 child: Container(
                                   height: UI.padding4x * 1.5,
                                   width: UI.padding8x * 1.8,
@@ -136,11 +137,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                        top: context.appBarHeight < 900.0
-                            ? context.mQHeight * 0.2
-                            : context.mQHeight * 0.25,
-                        left: UI.padding3x,
-                        right: UI.padding3x),
+                        top: context.mQHeight * 0.12,
+                        left: UI.padding4x,
+                        right: UI.padding4x),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

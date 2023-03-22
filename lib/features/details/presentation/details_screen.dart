@@ -84,9 +84,24 @@ class _DetailsScreenState extends State<DetailsScreen> {
         ? CupertinoPageScaffold(
             navigationBar: CupertinoNavigationBar(
               middle: const Text("Camms Risk"),
-              trailing: Image.asset(
-                appbarTickIcon,
-                color: mainBlue,
+              trailing: GestureDetector(
+                onTap: () async {
+                  var data = Detail(
+                    recordType: recordType.text.toString(),
+                    recordCode: recordCode.text.toString(),
+                    recordTitle: recordTitle.text.toString(),
+                    reportedBy: reportedBy.text.toString(),
+                    reportedDate: dateReported.text.toString(),
+                    dateOccurred: dateOccurred.text.toString(),
+                    image: imagePath.toString(),
+                  );
+
+                  await DatabaseHelper.instance.add(data);
+                },
+                child: Image.asset(
+                  appbarTickIcon,
+                  color: mainBlue,
+                ),
               ),
             ),
             child: SafeArea(
