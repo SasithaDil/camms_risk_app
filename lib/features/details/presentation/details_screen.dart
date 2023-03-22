@@ -363,45 +363,45 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         ComboButtons(
-                          onPressed: () {
-                            // try {
-                            //   _imageFile = await _picker.pickImage(
-                            //       source: ImageSource.camera);
-                            //   if (_imageFile != null) {
-                            //     final File imageTemp = File(_imageFile!.path);
-                            //     printLog(imageTemp);
-                            //     setState(() {
-                            //       imagePath = imageTemp.path;
-                            //     });
-                            //   } else {
-                            //     printLog("No image picked..");
-                            //   }
-                            // } catch (e) {
-                            //   printLog("Error $e");
-                            // }
+                          onPressed: () async {
+                            try {
+                              _imageFile = await _picker.pickImage(
+                                  source: ImageSource.camera);
+                              if (_imageFile != null) {
+                                final File imageTemp = File(_imageFile!.path);
+                                printLog(imageTemp);
+                                setState(() {
+                                  imagePath = imageTemp.path;
+                                });
+                              } else {
+                                printLog("No image picked..");
+                              }
+                            } catch (e) {
+                              printLog("Error $e");
+                            }
                           },
                           icon: Icons.camera_alt_outlined,
                           buttonText: 'Camera',
                         ),
                         ComboButtons(
-                          onPressed: () {
-                            // try {
-                            //   _imageFile = await _picker.pickImage(
-                            //       source: ImageSource.gallery);
-                            //   final imageTemp = File(_imageFile!.path);
-                            //   printLog(imageTemp);
-                            //   if (_imageFile != null) {
-                            //     final File imageTemp = File(_imageFile!.path);
-                            //     printLog(imageTemp);
-                            //     setState(() {
-                            //       imagePath = imageTemp.path;
-                            //     });
-                            //   } else {
-                            //     printLog("No image picked..");
-                            //   }
-                            // } catch (e) {
-                            //   printLog("error $e");
-                            // }
+                          onPressed: () async {
+                            try {
+                              _imageFile = await _picker.pickImage(
+                                  source: ImageSource.gallery);
+                              final imageTemp = File(_imageFile!.path);
+                              printLog(imageTemp);
+                              if (_imageFile != null) {
+                                final File imageTemp = File(_imageFile!.path);
+                                printLog(imageTemp);
+                                setState(() {
+                                  imagePath = imageTemp.path;
+                                });
+                              } else {
+                                printLog("No image picked..");
+                              }
+                            } catch (e) {
+                              printLog("error $e");
+                            }
                           },
                           icon: Icons.upload_file_outlined,
                           buttonText: 'Upload',
@@ -548,9 +548,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           padding: const EdgeInsets.all(UI.padding3x),
                           child: InkWell(
                             onTap: () {
-                             context.toNamed(
-                                    ScreenRoutes.toImagePreviewScreen,
-                                    args: imagePath);
+                              context.toNamed(ScreenRoutes.toImagePreviewScreen,
+                                  args: imagePath);
                             },
                             child: Text(imagePath),
                           ),
