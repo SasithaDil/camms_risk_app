@@ -14,6 +14,7 @@ import 'package:risk_sample/features/details_dynamic/logic/bloc/incident_detail_
 import 'package:risk_sample/features/details_dynamic/presentation/widget/incident_label.dart';
 import 'package:risk_sample/features/details_dynamic/presentation/widget/incident_text_field.dart';
 import 'package:risk_sample/routes/routes.dart';
+import 'package:risk_sample/routes/routes_extension.dart';
 import 'package:risk_sample/utils/assets.dart';
 import 'package:risk_sample/utils/constants.dart';
 
@@ -282,9 +283,9 @@ class _InsidentDetailScreenState extends State<InsidentDetailScreen> {
                                           const EdgeInsets.all(UI.padding3x),
                                       child: InkWell(
                                         onTap: () {
-                                          Navigator.pushNamed(context,
+                                          context.toNamed(
                                               ScreenRoutes.toImagePreviewScreen,
-                                              arguments: imagePath);
+                                              args: imagePath);
                                         },
                                         child: Text(imagePath),
                                       ),

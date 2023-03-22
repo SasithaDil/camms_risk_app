@@ -15,6 +15,7 @@ import 'package:risk_sample/features/details/presentation/widget/details_text_fo
 import 'package:risk_sample/features/details/presentation/widget/popup_box.dart';
 import 'package:risk_sample/features/details/presentation/widget/time_picker.dart';
 import 'package:risk_sample/routes/routes.dart';
+import 'package:risk_sample/routes/routes_extension.dart';
 import 'package:risk_sample/utils/assets.dart';
 import 'package:risk_sample/utils/constants.dart';
 
@@ -416,9 +417,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             padding: const EdgeInsets.all(UI.padding3x),
                             child: InkWell(
                               onTap: () {
-                                Navigator.pushNamed(
-                                    context, ScreenRoutes.toImagePreviewScreen,
-                                    arguments: imagePath);
+                                context.toNamed(
+                                    ScreenRoutes.toImagePreviewScreen,
+                                    args: imagePath);
                               },
                               child: Text(imagePath),
                             ),
@@ -547,9 +548,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           padding: const EdgeInsets.all(UI.padding3x),
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(
-                                  context, ScreenRoutes.toImagePreviewScreen,
-                                  arguments: imagePath);
+                             context.toNamed(
+                                    ScreenRoutes.toImagePreviewScreen,
+                                    args: imagePath);
                             },
                             child: Text(imagePath),
                           ),
