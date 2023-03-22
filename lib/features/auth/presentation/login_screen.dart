@@ -3,6 +3,7 @@ import 'package:risk_sample/core/screen_utils.dart';
 import 'package:risk_sample/core/theme.dart';
 import 'package:risk_sample/features/auth/presentation/widgets/login_text_field.dart';
 import 'package:risk_sample/routes/routes.dart';
+import 'package:risk_sample/routes/routes_extension.dart';
 import 'package:risk_sample/utils/assets.dart';
 import 'package:risk_sample/utils/constants.dart';
 
@@ -97,8 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               InkWell(
                                 //TODO: change navigation when done
-                                onTap: () => Navigator.pushNamed(
-                                    context, ScreenRoutes.toDetailsScreen),
+                                onTap: () => context.toNamed(ScreenRoutes.toDetailsScreen),
                                 child: Container(
                                   height: UI.padding4x * 1.5,
                                   width: UI.padding8x * 1.8,
