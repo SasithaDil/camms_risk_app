@@ -17,38 +17,24 @@ class IncidentDetailBloc
     on<IncidentDetailEvent>(_getFormControl);
   }
 
-  // FutureOr<void> _getFormControl(
-  //   IncidentDetailEvent event,
-  //   Emitter<IncidentDetailState> emit,
-  // ) async {
-  //   emit(IncidentDetailLoading());
-  //   try {
-  //     final formControl = await _formcontrolRepository.getFormControls();
-  //     emit(IncidentDetailLoaded(formControl: formControl));
-  //   } catch (e) {
-  //     printLog(e);
-  //     emit(IncidentDetailFailed(error: e.toString()));
-  //   }
-  // }
-
   FutureOr<void> _getFormControl(
     IncidentDetailEvent event,
     Emitter<IncidentDetailState> emit,
   ) async {
     emit(IncidentDetailLoading());
 
-    final  formControl = await _formreadJson.readJsonData();
+    final formControl = await _formreadJson.readJsonData();
 
-    // List<TextEditingController> controllers = [];
-    Map<String,dynamic> controllers = {};
+    Map<String, dynamic> controllers = {};
 
-    for(var i=0;i<formControl.length;i++){
-      // controllers.add(TextEditingController());
-      controllers['${formControl[i].objectDefinitionId}'] = TextEditingController();
+    for (var i = 0; i < formControl.length; i++) {
+      controllers['${formControl[i].objectDefinitionId}'] =
+          TextEditingController();
     }
 
     printLog("controllers-->$controllers");
-    
-    emit(IncidentDetailLoaded(formCon: formControl, textControllers:controllers));
+
+    emit(IncidentDetailLoaded(
+        formCon: formControl, textControllers: controllers));
   }
 }
